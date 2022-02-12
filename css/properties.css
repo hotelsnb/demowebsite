@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Libre Baskerville", serif;
+}
+
+#full-width {
+  background: #f0ededc9;
+}
+
+nav,
+#find {
+  background: #255758;
+}
+
+#search > button {
+  background: #255758;
+  padding: 0.3rem 1.5rem 0.4rem;
+  font-size: 21px;
+}
+#search .fa-map-marker-alt {
+  color: #747474;
+  position: relative;
+  left: 1.75em;
+  width: max-content;
+  font-size: 18px;
+}
+#search input {
+  padding-left: 2rem;
+}
+
+.fa-phone {
+  cursor: pointer;
+}
+
+#minPrice,
+#maxPrice {
+  width: 125px;
+}
+
+#filters {
+  height: max-content;
+  width: 32% !important;
+  margin-right: 15px;
+}
+
+#nearme {
+  width: 17px;
+  height: 17px;
+}
+
+#amenities span {
+  width: 40%;
+  list-style-type: disc;
+}
+#amenities span::before {
+  content: "*";
+  font-size: 25px;
+  vertical-align: middle;
+  line-height: 20px;
+  margin: 0px 12px;
+}
+
+#footer {
+  background: #255758;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+#footer .d-flex {
+  opacity: 0.8;
+}
+
+.propertyCard img {
+  width: 236px !important;
+  height: 200px !important;
+}
+#largeImg {
+  width: 546px !important;
+  height: 440px !important;
+}
+.smallImgs {
+  width: 261px !important;
+  height: 213px !important;
+}
+
+.displayPropertyDetails {
+  cursor: pointer;
+}
+.displayPropertyDetails:hover {
+  transform: scale3d(1.05, 1.05, 1.05);
+  border-bottom: 1px solid blue;
+  transition: 0.3s;
+}
+
+input[type="radio"] {
+  border: 1px solid rgb(0, 0, 0);
+  padding: 0.5em;
+  -webkit-appearance: none;
+}
+input[type="radio"]:checked {
+  background: #255758;
+  background-size: 9px 9px;
+}
+input[type="radio"]:focus {
+  outline-color: transparent;
+}
+
+.feedback {
+  border-color: #6c757d40;
+}
+
+/* tablet view */
+@media (max-width: 825px) {
+  #filters {
+    width: 50% !important;
+    display: none;
+  }
+}
+/*  mobile view */
+@media (max-width: 520px) {
+  #filters {
+    width: 100% !important;
+  }
+  .propertyCard img {
+    width: 100% !important;
+  }
+  .navbar-brand {
+    width: 150px !important;
+  }
+  #amenities span {
+    width: 100%;
+  }
+}

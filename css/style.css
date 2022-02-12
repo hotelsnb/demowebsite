@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Libre Baskerville", serif;
+}
+
+#hero {
+  background-image: url("../img/bg.svg");
+  height: 600px;
+}
+#hero h1 {
+  font-size: 65px;
+  font-weight: 700;
+}
+
+#full-width-1 .card span {
+  background: #255758;
+  padding: 6px 0px;
+}
+#full-width-1 .card-img-top {
+  margin-bottom: -34px;
+  width: 240px;
+  height: 240px;
+}
+#full-width-2 .card-img-top {
+  width: 288px;
+  height: 288px;
+}
+
+#full-width-1 .card,
+#full-width-1 {
+  background: #f0eded;
+}
+
+#full-width-2 {
+  background: #e4e2e2;
+}
+
+#search > button {
+  background: #255758;
+  padding: 0.3rem 1.5rem 0.35rem;
+  font-size: 21px;
+}
+#search .fa-map-marker-alt {
+  color: #747474;
+  position: relative;
+  left: 1.75em;
+  width: max-content;
+  font-size: 18px;
+}
+#search input {
+  padding-left: 2rem;
+}
+
+.displayPropertyDetails {
+  cursor: pointer;
+}
+.displayPropertyDetails:hover {
+  transform: scale3d(1.04, 1.04, 1.04);
+  transition: 0.4s;
+}
+
+#footer {
+  background: #255758;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+#footer .d-flex {
+  opacity: 0.8;
+}

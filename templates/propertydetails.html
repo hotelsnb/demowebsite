@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- font awesome icons -->
+    <script src="https://kit.fontawesome.com/3b1cc6c86a.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../css/properties.css">
+
+    <title>Property Details</title>
+</head>
+
+<body>
+    <!-- header -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="/" style="width: 200px;">
+                <img src="../img/logo_new.png" class="d-inline-block align-center w-100">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#hamMenu"
+                aria-controls="hamMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars fs-1 text-white"></i>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="hamMenu">
+                <ul class="navbar-nav">
+                    <li class="nav-item button_hover_color_outer rounded-pill">
+                        <a class="nav-link button_hover_color text-white" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item mx-lg-4 px-lg-4 button_hover_color_outer rounded-pill">
+                        <a class="nav-link button_hover_color text-white" id="emailMe" aria-current="page"
+                            href="mailto:contact@hotelsnb.in">Contact
+                            Us</a>
+                    </li>
+                    <div class="dropdown">
+                        <button class="btn text-white dropdown-toggle ps-0" type="button" id="accountDropdown"
+                            data-bs-toggle="dropdown" aria-expanded="false">My Account
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="accountDropdown">
+                            <li class="dropdown-item">Debajit Das</li>
+                            <li class="dropdown-item my-1">+91 7872836494</li>
+                            <li class="dropdown-item mb-2 pb-2 border-bottom">clicktovisit.in@gmail.com</li>
+                            <li><a class="dropdown-item mb-2 pb-2 border-bottom fw-bold" href="#">My Wishlist</a></li>
+                            <li><a class="dropdown-item text-danger fw-bold" href="./login.html">Log Out</a>
+                            </li>
+                        </ul>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- property images -->
+    <div class="container" id="images">
+        <div class="row my-5">
+            <div class="col-6">
+                <img id="largeImg" src="../img/beach-resort.jpg" alt="">
+            </div>
+            <div class="col-6">
+                <div class="row mb-3">
+                    <div class="col-6">
+                        <img class="smallImgs" src="../img/br-1.jpg" alt="">
+                    </div>
+                    <div class="col-6">
+                        <img class="smallImgs" src="../img/br-2.jpg" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <img class="smallImgs" src="../img/br-3.jpg" alt="">
+                    </div>
+                    <div class="col-6">
+                        <img class="smallImgs" src="../img/br-4.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- details -->
+    <div class="container" id="details">
+        <div class="row">
+            <div class="col-lg-6">
+                <span class="h2 fw-bold text-muted d-inline-block">Beach Resort</span>
+                <span class="h2 fw-bold text-muted float-end">
+                    <i class="fa-solid fa-indian-rupee-sign fs-3"></i> 1200
+                </span>
+                <h6 class="w-75">Digha, West Bengal - 710023</h6>
+                <div class="fs-5 my-4" id="rating">
+                    <span>4.0/5</span>
+                    <i class="fas fa-star ms-2"></i>
+                    <span class="ms-2 fs-6">(49 Reviews)</span>
+                    <!-- wishlist -->
+                    <i class="fas fa-heart fs-4 text-danger float-end me-1"></i>
+                </div>
+                <!-- amenities -->
+                <h5 class="fw-bold mt-4 mb-3">Popular amenities</h5>
+                <div class="mb-lg-0 mb-4" id="amenities">
+                    <span class="d-inline-block fs-6 py-1">Free WiFi</span>
+                    <span class="d-inline-block fs-6 py-1">Hot & Cold water</span>
+                    <span class="d-inline-block fs-6 py-1">Blanket</span>
+                    <span class="d-inline-block fs-6 py-1">Bonfire</span>
+                </div>
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-5">
+                <hr class="d-lg-none">
+                <!-- functional icons -->
+                <div class="d-flex px-lg-5 col-md-6 col-lg-12 my-4 my-lg-0 justify-content-between" id="icons">
+                    <a href="#" class="fas fa-phone-alt fs-2 text-decoration-none text-dark"></a>
+                    <a href="#" class="fas fa-map-marked-alt fs-2 text-decoration-none text-dark"></a>
+                    <a href="#" class="fas fa-link fs-2 text-decoration-none text-dark"></a>
+                    <a href="#" class="fas fa-share-alt fs-2 text-decoration-none text-dark"></a>
+                </div>
+                <hr class="d-lg-none">
+                <!-- explore area -->
+                <div class="ms-lg-5" id="explore">
+                    <h5 class="fw-bold mt-5 mb-4">Explore the area</h5>
+                    <p class="fs-6 mb-2">
+                        <i class="fas fa-map-marker-alt me-3"></i>
+                        <span class="d-inline-block w-50">Mandarmani</span>
+                        <span>1 hour drive</span>
+                    </p>
+                    <p class="fs-6 mb-2">
+                        <i class="fas fa-map-marker-alt me-3"></i>
+                        <span class="d-inline-block w-50">New Digha</span>
+                        <span>30 mins walk</span>
+                    </p>
+                    <p class="fs-6 mb-2">
+                        <i class="fas fa-map-marker-alt me-3"></i>
+                        <span class="d-inline-block w-50">Mohona</span>
+                        <span>45 mins walk</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- review section -->
+    <div class="container my-5 pt-2" id="review">
+        <hr>
+        <span class="h3 fw-bold text-muted d-inline-block my-3">Customer Reviews</span>
+        <div class="row pt-4 flex-lg-row flex-column-reverse">
+            <div class="col-lg-4 mt-lg-0 mt-4 pe-lg-5">
+                <h5 class="fw-bold mb-3">Add Review</h5>
+                <p class="mb-0">
+                    <i class="far fa-star fs-5"></i>
+                    <i class="far fa-star ms-3 fs-5"></i>
+                    <i class="far fa-star ms-3 fs-5"></i>
+                    <i class="far fa-star ms-3 fs-5"></i>
+                    <i class="far fa-star ms-3 fs-5"></i>
+                </p>
+                <textarea class="my-3 d-block w-100" name="addReview" id="addReview" placeholder="" rows="3"></textarea>
+                <button class="btn btn-secondary px-5 py-2 rounded-2 fw-bold">Add</button>
+            </div>
+            <div class="col-lg-8">
+                <section class="feedback mb-5 border rounded-1 p-4 shadow">
+                    <h5 class="fw-bold">Saddy Sk</h5>
+                    <i class="fas fa-star me-2 mb-3"></i>4.9/5
+                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quod rerum
+                        blanditiis vel quia
+                        reiciendis modi sapiente ipsum perferendis maiores.</p>
+                </section>
+                <section class="feedback mb-5 border rounded-1 p-4 shadow">
+                    <h5 class="fw-bold">Rony Parker</h5>
+                    <i class="fas fa-star me-2 mb-3"></i>5.3/5
+                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quod rerum
+                        blanditiis vel quia reiciendis modi sapiente ipsum perferendis maiores.</p>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="pb-4 pt-5" id="footer">
+        <hr class="mx-md-5 mx-2 my-1 text-white">
+        <div class="d-flex flex-md-row flex-column justify-content-between mx-md-5 mx-2">
+            <p class="mb-md-1 mb-4 text-white fw-bold">HotelSNB.in &copy; All rights reserved.</p>
+            <p class="text-white mb-1">Contact us at
+                <a class="text-decoration-none" href="tel:7872836494">+91 78728 36494</a> to list your property.
+            </p>
+        </div>
+    </div>
+</body>
+<!-- js -->
+<script src="{% static 'properties.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+
+</html>

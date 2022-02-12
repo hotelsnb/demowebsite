@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- font awesome icons -->
+    <script src="https://kit.fontawesome.com/3b1cc6c86a.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../css/properties.css">
+
+    <title>Properties</title>
+</head>
+
+<body>
+    <!-- header -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="/" style="width: 200px;">
+                <img src="../img/logo_new.png" class="d-inline-block align-center w-100">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#hamMenu"
+                aria-controls="hamMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars fs-1 text-white"></i>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="hamMenu">
+                <ul class="navbar-nav">
+                    <li class="nav-item button_hover_color_outer rounded-pill">
+                        <a class="nav-link button_hover_color text-white" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item mx-lg-4 px-lg-4 button_hover_color_outer rounded-pill">
+                        <a class="nav-link button_hover_color text-white" id="emailMe" aria-current="page"
+                            href="mailto:contact@hotelsnb.in">Contact
+                            Us</a>
+                    </li>
+                    <div class="dropdown">
+                        <button class="btn text-white dropdown-toggle ps-0" type="button" id="accountDropdown"
+                            data-bs-toggle="dropdown" aria-expanded="false">My Account
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="accountDropdown">
+                            <li class="dropdown-item">Debajit Das</li>
+                            <li class="dropdown-item my-1">+91 7872836494</li>
+                            <li class="dropdown-item mb-2 pb-2 border-bottom">clicktovisit.in@gmail.com</li>
+                            <li><a class="dropdown-item mb-2 pb-2 border-bottom fw-bold" href="#">My Wishlist</a></li>
+                            <li><a class="dropdown-item text-danger fw-bold" href="./login.html">Log Out</a>
+                            </li>
+                        </ul>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- banner image -->
+    <img class="w-100" src="../img/banner.svg" alt="">
+
+    <!-- list boody -->
+    <section id="full-width">
+        <div class="container pt-lg-0 pt-4">
+            <!-- filter menu button -->
+            <button class="navbar-toggler text-dark float-start fs-2 mt-1 d-lg-none" onclick="toggleFilterMenu()">
+                <i class="fa-solid fa-filter"></i>
+            </button>
+            <!-- search property by location -->
+            <div class="pt-lg-5 text-lg-center text-end" id="search">
+                <i class="col-1 mt-1 fas fa-map-marker-alt"></i>
+                <input class="py-2 pe-3 col-lg-3 col-md-5 col-7" type="text" name="location" id="location"
+                    placeholder="location">
+                <button class="border-0" type="submit" onclick="searchProperties()"><i
+                        class="fas fa-search text-white"></i></button>
+            </div>
+
+            <!-- list items -->
+            <div class="row py-5">
+                <!-- filters -->
+                <div class="col-lg-4 shadow p-4 bg-light mb-lg-0 mb-5" id="filters">
+                    <h5 class="fw-bold">Filters</h5>
+                    <form onsubmit="searchProperties()">
+                        <!-- ratings -->
+                        <div id="ratings">
+                            <p class="fs-6 mt-4 mb-2 fw-bold">Ratings</p>
+                            <label class="fs-4" for="rating1">1</label>
+                            <input class="me-3" type="radio" name="ratingStar" id="rating1" value="1">
+                            <label class="fs-4" for="rating2">2</label>
+                            <input class="me-3" type="radio" name="ratingStar" id="rating2" value="2">
+                            <label class="fs-4" for="rating3">3</label>
+                            <input class="me-3" type="radio" name="ratingStar" id="rating3" value="3">
+                            <label class="fs-4" for="rating4">4</label>
+                            <input class="me-3" type="radio" name="ratingStar" id="rating4" value="4">
+                            <label class="fs-4" for="rating5">5</label>
+                            <input class="me-3" type="radio" name="ratingStar" id="rating5" value="5">
+
+                            <input type="hidden" name="rating" id="rating">
+                        </div>
+                        <!-- price -->
+                        <div id="price">
+                            <p class="fs-6 mt-4 mb-2 fw-bold">Price</p>
+                            <!-- min -->
+                            <select class="p-2" name="minPrice" id="minPrice">
+                                <option value="0">Min</option>
+                                <option value="1000">1000</option>
+                                <option value="1500">1500</option>
+                                <option value="2000">2000</option>
+                            </select>
+                            <span class="mx-3">to</span>
+                            <!-- max -->
+                            <select class="p-2" name="maxPrice" id="maxPrice">
+                                <option value="10000">Max</option>
+                                <option value="1500">1500</option>
+                                <option value="2000">2000</option>
+                                <option value="3000">3000</option>
+                            </select>
+                        </div>
+                        <!-- distance -->
+                        <div id="distance">
+                            <p class="fs-6 mt-4 mb-2 fw-bold">Distance</p>
+                            <input type="checkbox" name="nearme" id="nearme" onclick="getLocation()">
+                            <label for="nearme">Near Me</label>
+                            <!-- spinner -->
+                            <div class="spinner-border spinner-border-sm ms-4 mb-1" role="status" id="spinner"
+                                style="display: none;">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                            <input type="hidden" name="lat" id="lat" value="0">
+                            <input type="hidden" name="lng" id="lng" value="0">
+                        </div>
+                        <button type="submit" class="btn mt-4 w-50 text-white py-2" id="find">Find</button>
+                    </form>
+                </div>
+                <!-- properties -->
+                <div class="col-lg-8" id="properties">
+                    <!-- <h3 class="text-center mt-4 text-muted">No property found for this location</h3> -->
+                    <p class="mb-1" id="displayLocation">
+                        <code class="fs-5 ms-3">Location: </code>kolkata
+                    </p>
+                    <p class="mb-4" id="displayFilters">
+                        <span class="d-inline-block"><span class="fw-bold ms-3">Rartings : </span>3 & above</span>
+                        <span class="d-inline-block"><span class="fw-bold ms-3">Budget : </span>₹ 500 - ₹ 2000</span>
+                    </p>
+                    <!-- each property -->
+                    <div class="propertyCard row bg-white shadow mb-5 p-md-0 p-3">
+                        <div class="col-md-4 ps-md-0"><img src="../img/beach-resort.jpg"></div>
+                        <div class="col-md-6">
+                            <h4 class="mt-3">Beach Resort</h4>
+                            <p class="mb-3">Digha, West Bengal - 710023</p>
+                            <p class="fs-5">
+                                <i class="fa-solid fa-indian-rupee-sign"></i> 1200
+                            </p>
+                            <div class="review my-2 fs-5">
+                                <span>4.0</span>
+                                <i class="fas fa-star ms-2"></i>
+                                <span class="ms-5 ps-5 float-md-none float-end">49 Reviews</span>
+                            </div>
+                        </div>
+                        <div
+                            class="col-md-2 d-flex flex-md-column justify-content-between align-items-center p-3 ps-md-0">
+                            <i class="fas fa-phone mt-2 fs-4 text-muted"></i>
+                            <p class="displayPropertyDetails fw-bold text-primary mb-lg-3 mb-0" onclick="details()">View
+                                details</p>
+                        </div>
+                    </div>
+                    <!-- each property -->
+                    <div class="propertyCard row bg-white shadow mb-5 p-md-0 p-3">
+                        <div class="col-md-4 ps-md-0"><img src="../img/kranti-palace.jpg"></div>
+                        <div class="col-md-6">
+                            <h4 class="mt-3">Kranti Palace</h4>
+                            <p class="mb-3">Darjeeling, West Bengal - 734101</p>
+                            <p class="fs-5">
+                                <i class="fa-solid fa-indian-rupee-sign"></i> 2300
+                            </p>
+                            <div class="review my-2 fs-5">
+                                <span>5.0</span>
+                                <i class="fas fa-star ms-2"></i>
+                                <span class="ms-5 ps-5 float-md-none float-end">71 Reviews</span>
+                            </div>
+                        </div>
+                        <div
+                            class="col-md-2 d-flex flex-md-column justify-content-between align-items-center p-3 ps-md-0">
+                            <i class="fas fa-phone mt-2 fs-4 text-muted"></i>
+                            <p class="displayPropertyDetails fw-bold text-primary mb-lg-3 mb-0" onclick="details()">View
+                                details</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <div class="pb-4 pt-5" id="footer">
+        <hr class="mx-md-5 mx-2 my-1 text-white">
+        <div class="d-flex flex-md-row flex-column justify-content-between mx-md-5 mx-2">
+            <p class="mb-md-1 mb-4 text-white fw-bold">HotelSNB.in &copy; All rights reserved.</p>
+            <p class="text-white mb-1">Contact us at
+                <a class="text-decoration-none" href="tel:7872836494">+91 78728 36494</a> to list your property.
+            </p>
+        </div>
+    </div>
+</body>
+<!-- js -->
+<script src="../js/properties.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+
+</html>

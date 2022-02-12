@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- font awesome icons -->
+    <script src="https://kit.fontawesome.com/3b1cc6c86a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>HotelSNB</title>
+</head>
+
+<body>
+    <div class="container-fluid" id="hero">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-none">
+            <div class="container-fluid p-md-4 p-2">
+                <a href="/" style="width: 185px;"><img class="w-100" src="./img/logo_new.png" alt="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#hamBurgerMenu"
+                    aria-controls="hamBurgerMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="hamBurgerMenu">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item mx-lg-5">
+                            <a class="nav-link active" id="emailMe" href="mailto:contact@hotelsnb.in">Contact Us</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle fw-bold text-white" href="#" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                My Account
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li class="dropdown-item">Debajit Das</li>
+                                <li class="dropdown-item my-1">+91 7872836494</li>
+                                <li class="dropdown-item mb-2 pb-2 border-bottom">clicktovisit.in@gmail.com</li>
+                                <li><a class="dropdown-item mb-2 pb-2 border-bottom fw-bold" href="#">My Wishlist</a>
+                                </li>
+                                <li><a class="dropdown-item text-danger fw-bold" href="./templates/login.html">Log
+                                        Out</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="text-center mt-5 pt-5">
+            <p class="col-md-6 m-auto text-white h1 fw-bold" style="font-size: 50px;">Your Comfort is our Happiness</p>
+            <!-- search property by location -->
+            <div class="mt-5" id="search">
+                <i class="col-1 mt-1 fas fa-map-marker-alt"></i>
+                <input class="py-2 pe-3 col-lg-3 col-md-5" type="text" name="location" placeholder="kolkata">
+                <button class="border-0" type="submit" onclick="searchDestinations()"><i
+                        class="fas fa-search text-white"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- featured -->
+    <section class="py-5" id="full-width-1">
+        <div class="container my-4" id="primary">
+            <h2 class="mb-5">Featured Hotels</h2>
+            <div class="cards row justify-content-lg-between justify-content-center px-2">
+                <!-- featured properties -->
+                <div class="card border-0 shadow p-0 mb-lg-0 mb-4 ms-md-5" onclick="propertyDetails()"
+                    style=" width: 15rem;">
+                    <img src="./img/beach-resort.jpg" class="card-img-top">
+                    <span class="text-center">
+                        <i class="fas fa-star text-white"></i>
+                        <i class="fas fa-star text-white"></i>
+                        <i class="fas fa-star text-white"></i>
+                        <i class="fas fa-star text-white"></i>
+                        <i class="far fa-star text-white"></i>
+                    </span>
+                    <div class="card-body pt-0 mt-3">
+                        <p class="card-text fs-4 m-0">Beach Resort</p>
+                        <p class="card-text m-0">Digha, West Bengal</p>
+                    </div>
+                </div>
+                <!-- featured properties -->
+                <div class="card border-0 shadow p-0 mb-lg-0 mb-4 ms-md-5" onclick="propertyDetails()"
+                    style=" width: 15rem;">
+                    <img src="./img/beach-resort.jpg" class="card-img-top">
+                    <span class="text-center">
+                        <i class="fas fa-star text-white"></i>
+                        <i class="fas fa-star text-white"></i>
+                        <i class="fas fa-star text-white"></i>
+                        <i class="fas fa-star text-white"></i>
+                        <i class="far fa-star text-white"></i>
+                    </span>
+                    <div class="card-body pt-0 mt-3">
+                        <p class="card-text fs-4 m-0">Beach Resort</p>
+                        <p class="card-text m-0">Digha, West Bengal</p>
+                    </div>
+                </div>
+                <!-- featured properties -->
+                <div class="card border-0 shadow p-0 mb-lg-0 mb-4 ms-md-5" onclick="propertyDetails()"
+                    style=" width: 15rem;">
+                    <img src="./img/beach-resort.jpg" class="card-img-top">
+                    <span class="text-center">
+                        <i class="fas fa-star text-white"></i>
+                        <i class="fas fa-star text-white"></i>
+                        <i class="fas fa-star text-white"></i>
+                        <i class="fas fa-star text-white"></i>
+                        <i class="far fa-star text-white"></i>
+                    </span>
+                    <div class="card-body pt-0 mt-3">
+                        <p class="card-text fs-4 m-0">Beach Resort</p>
+                        <p class="card-text m-0">Digha, West Bengal</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- recommended -->
+    <section class="py-5" id="full-width-2">
+        <div class="container my-4" id="secondary">
+            <h2>Our Recommended Hotels</h2>
+            <div class="row justify-content-center mt-5">
+                <div class="col-12">
+                    <div class="main-carousel"
+                        data-flickity='{ "cellAlign": "left", "contain": true , "freeScroll": true , "groupCells" : 3 , "prevNextButtons": false}'>
+                        <!-- recommended properties -->
+                        <div class="carousel-cell ms-5" onclick="propertyDetails()">
+                            <div class="card border-0 p-0" style="width: 18rem;">
+                                <img src="./img/kranti-palace.jpg" class="card-img-top">
+                                <div class="card-body pt-0 mt-3">
+                                    <p class="card-text fs-4 m-0">Kranti Palace</p>
+                                    <div class="review mt-2 fw-bold">
+                                        <span>
+                                            <span>5.0</span>
+                                            <i class="fas fa-star ms-2"></i>
+                                        </span>
+                                        <span class="ms-5 ps-5">71 Reviews</span>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <i class="col-1 mt-1 fas fa-map-marker-alt"></i>
+                                        <span class="col-10">Darjeeling, West Bengal - 734101</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- recommended properties -->
+                        <div class="carousel-cell ms-5" onclick="propertyDetails()">
+                            <div class="card border-0 p-0" style="width: 18rem;">
+                                <img src="./img/kranti-palace.jpg" class="card-img-top">
+                                <div class="card-body pt-0 mt-3">
+                                    <p class="card-text fs-4 m-0">Kranti Palace</p>
+                                    <div class="review mt-2 fw-bold">
+                                        <span>
+                                            <span>5.0</span>
+                                            <i class="fas fa-star ms-2"></i>
+                                        </span>
+                                        <span class="ms-5 ps-5">71 Reviews</span>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <i class="col-1 mt-1 fas fa-map-marker-alt"></i>
+                                        <span class="col-10">Darjeeling, West Bengal - 734101</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- recommended properties -->
+                        <div class="carousel-cell ms-5" onclick="propertyDetails()">
+                            <div class="card border-0 p-0" style="width: 18rem;">
+                                <img src="./img/kranti-palace.jpg" class="card-img-top">
+                                <div class="card-body pt-0 mt-3">
+                                    <p class="card-text fs-4 m-0">Kranti Palace</p>
+                                    <div class="review mt-2 fw-bold">
+                                        <span>
+                                            <span>5.0</span>
+                                            <i class="fas fa-star ms-2"></i>
+                                        </span>
+                                        <span class="ms-5 ps-5">71 Reviews</span>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <i class="col-1 mt-1 fas fa-map-marker-alt"></i>
+                                        <span class="col-10">Darjeeling, West Bengal - 734101</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- recommended properties -->
+                        <div class="carousel-cell ms-5" onclick="propertyDetails()">
+                            <div class="card border-0 p-0" style="width: 18rem;">
+                                <img src="./img/kranti-palace.jpg" class="card-img-top">
+                                <div class="card-body pt-0 mt-3">
+                                    <p class="card-text fs-4 m-0">Kranti Palace</p>
+                                    <div class="review mt-2 fw-bold">
+                                        <span>
+                                            <span>5.0</span>
+                                            <i class="fas fa-star ms-2"></i>
+                                        </span>
+                                        <span class="ms-5 ps-5">71 Reviews</span>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <i class="col-1 mt-1 fas fa-map-marker-alt"></i>
+                                        <span class="col-10">Darjeeling, West Bengal - 734101</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <div class="pb-4 pt-5" id="footer">
+        <hr class="mx-md-5 mx-2 my-1 text-white">
+        <div class="d-flex flex-md-row flex-column justify-content-between mx-md-5 mx-2">
+            <p class="mb-md-1 mb-4 text-white fw-bold">HotelSNB.in &copy; All rights reserved.</p>
+            <p class="text-white mb-1">Contact us at
+                <a class="text-decoration-none" href="tel:7872836494">+91 78728 36494</a> to list your property.
+            </p>
+        </div>
+    </div>
+</body>
+<!-- js -->
+<script src="./js/properties.js"></script>
+<!-- carousel -->
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+
+</html>
