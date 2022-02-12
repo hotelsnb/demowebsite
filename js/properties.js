@@ -75,5 +75,3 @@ function toggleFilterMenu() {
     filterMenu.style.display = "none";
   }
 }
-
-function displayContactNumber() {}
